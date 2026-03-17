@@ -19,28 +19,29 @@ int M=sc.nextInt(); // Maximum limit of aayush
 int N=sc.nextInt(); // Maximum limit of harshit
 
 int count=1; //For tracking their purchase of pohones
-int asum=0;
-int hsum=0;
+int asum=0; // for checking how many phones purchased by aayush
+int hsum=0; // for checking how many phones purchased by harshit
 
 while(true) // Whenever one of the if condition got true then loops ends by printing who wins
 {
 
-asum= asum+count;
+asum= asum+count; // for calculating aayush ourchase
 if(asum>M) // if maximum limit of aayush got reached then print harshit as winner
 {
 System.out.println("Harshit");
 break;
 }
 
-count++;
-hsum= hsum+count;
+count++; // increasing for harshit
+        // then after that increase the no. because if aayush buy 1 then harshit 2 then aayush 3 then harshit 4
+hsum= hsum+count; // for calculating phone purchase by harshit
 if(hsum>N) // if maximum limit of harshit reached then print aayush as winner
 {
 System.out.println("Aayush");
 break;
 }
 
-count++;
+count++; //increasing for aayush
 }
 
 i++;
